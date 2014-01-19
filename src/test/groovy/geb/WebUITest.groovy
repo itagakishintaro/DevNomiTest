@@ -11,7 +11,7 @@ import org.junit.Test
 class WebUITest {
 
 	def file = "src/test/resources/kdt.xlsx"
-	def url = "file:///D:/Google%20%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%87%E3%83%96%E3%83%8E%E3%83%9F/DevNomiHotelError/index.html"
+	def url = "file:///D:/Google%20ドライブ/デブノミ/DevNomiHotelAnswer/index.html"
 	Workbook book
 	FormulaEvaluator evaluator
 

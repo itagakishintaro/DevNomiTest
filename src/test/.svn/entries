@@ -1,34 +1,0 @@
-10
-
-dir
-134
-http://54.250.224.111/svn/hotelagileweb/HotelAgileWebUITest/src/test
-http://54.250.224.111/svn/hotelagileweb
-
-
-
-2013-12-18T09:37:27.490476Z
-134
-itagaki
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-abe411d0-bfc5-4619-8860-412f7a4c06da
-
-groovy
-dir
-
-resources
-dir
-

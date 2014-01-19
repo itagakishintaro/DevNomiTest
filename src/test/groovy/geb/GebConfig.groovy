@@ -14,6 +14,7 @@ driver = {
 
 environments {
 	// when system property 'geb.env' is set to 'ie' use a remote IE driver
+	// -Dgeb.env=ie
 	'ie' {
 		driver = {
 			System.setProperty('webdriver.ie.driver', 'webdriver/IEDriverServer.exe')
