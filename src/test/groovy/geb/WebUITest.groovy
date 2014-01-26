@@ -9,7 +9,6 @@ import org.junit.Before
 import org.junit.Test
 
 class WebUITest {
-
 	def file = "src/test/resources/kdt.xlsx"
 	def url = "file:///D:/Google%20ドライブ/DevNomi/DevNomiHotelAnswer/index.html"
 	Workbook book
