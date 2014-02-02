@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Condition</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <h1>予約フォーム</h1>
+        <p>早割：予約日が宿泊開始日の14日以上前の場合、宿泊料金が5％割引になります。</p>
+        <p>団体割引：10名以上でお泊りの場合、10000円割引させていただきます。</P>
+        <p>連泊割引：7泊以上連泊される場合、一泊あたり1000円割引させていただきます。</p>
+        <p>※割引は最も割引額の高いもの１つが適用されます。</p>
+
+        <form id="reserve_info" class="well" action="./check_info.html">
+            <h3>宿泊日</h3>
+            <p>※宿泊日には、90日以内のお日にちのみ指定できます。</p>
+            <input id="datepicker" type="input" class="span4" maxlength="10" style="font-size:22px; width:140px; text-align:center;" value="">
+            <input id="reserve_year" name="reserve_y" type="hidden" class="span4" maxlength="4" style="width:20px">
+            <input id="reserve_month" name="reserve_m" type="hidden" class="span4" maxlength="2" style="width:20px">
+            <input id="reserve_day" name="reserve_d" type="hidden" class="span4" maxlength="2" style="width:20px">から
+            <input id="reserve_term" name="reserve_t" style="width:50px; height:35px">泊
+
+            <h3>人数</h3>
+            <input id="headcount" name="hc" style="width:50px; height:35px">人
+
+            <h3>部屋数</h3>
+            シングル(禁煙)
+            <select id="single_non_smoking" name="single_ns" style="width:50px; height:35px">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            部屋　1泊7000円〜 土日は25％アップ
+            <br>シングル(喫煙)
+            <select id="single_smoking" name="single_s" style="width:50px; height:35px">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            部屋　1泊7000円〜 土日は25％アップ
+            <br>ダブル(禁煙)
+            <select id="double_non_smoking" name="double_ns" style="width:50px; height:35px">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            部屋　1泊12000円〜 土日は25％アップ
+            <br>ダブル(喫煙)
+            <select id="double_smoking" name="double_s" style="width:50px; height:35px">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            部屋　1泊12000円〜 土日は25％アップ
+            <br>
+            <a href="javascript:alert('未実装')">料金詳細を確認</a>
+
+            <h3>朝食バイキング</h3>
+            <input id="breakfast_viking_on" name="bf_viking" type="radio" class="span4" maxlength="1" style="width:20px" value="on">あり
+            <input id="breakfast_viking_off" name="bf_viking" type="radio" class="span4" maxlength="1" style="width:20px" value="off">なし
+            <p>※お一人様1000円（宿泊日数分かかります）</p>
+            <h3>プラン</h3>
+            <input id="plan_a" name="plan_a" type="checkbox" class="span4" maxlength="1" style="width:20px">昼からチェックインプラン
+            <input id="plan_b" name="plan_b" type="checkbox" class="span4" maxlength="1" style="width:20px">お得な観光プラン
+            <br>
+            <p>※一部屋1000円</p>
+            <hr>
+            <button id="goto_next" type="sender" class="btn btn-primary"  onClick="setDate()">次へ</button>
+        </form>
+    </div>
+
+
+    <!-- /container -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(function() {
+        $("#datepicker").datepicker({
+            dateFormat: 'yy/mm/dd',
+            setDate: '2014/01/01',
+            defaultDate: '2014/01/01'
+        });
+    });
+    function setDate(){
+        $("#reserve_year").val($("#datepicker").val().split("/")[0]);
+        $("#reserve_month").val($("#datepicker").val().split("/")[1]);
+        $("#reserve_day").val($("#datepicker").val().split("/")[2]);
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reservation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>予約内容</h1>
+
+        <div id="slide1" class="well">
+            <div id="errorcheck_result" style="color:red"></div>
+            <button id="returnto_index" type="sender" class="btn btn-primary" style="margin-bottom:20px">戻る</button>
+            <div id="billing" style="display:none; margin-bottom:20px"></div>
+        </div>
+
+    </div>
+
+    <!-- /container -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/dateValidate.js"></script>
+    <script src="js/holiday.js"></script>
+    <script src="js/reserveApp.js"></script>
+    <script src="js/reserveAppView.js"></script>
+
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("#returnto_index").click(function() {
+        history.back();
+    });
+
+    var checkValRes = getUrlVars();
+    $(function() {　 //init 
+
+        var dateValue = checkValRes["reserve_y"] + "/" + checkValRes["reserve_m"] + "/" + checkValRes["reserve_d"];
+
+        if (!devnomiHotelView.checkInfo_isErrorRender(checkValRes, dateValue)) {
+            return false;
+        }
+
+        /* calculate charge. If exist some error, not running from here*/
+        var totalBill = devnomiHotel.calcTotalBilling(parseInt(checkValRes["single_ns"]), parseInt(checkValRes["single_s"]),
+            parseInt(checkValRes["double_ns"]), parseInt(checkValRes["double_s"]), dateValue, checkValRes["bf_viking"],
+            checkValRes["plan_a"], checkValRes["plan_b"], parseInt(checkValRes["reserve_t"]));
+
+        devnomiHotelView.renderCheckInfo(totalBill, dateValue);
+
+    });
+    </script>
+</body>
+
+</html>

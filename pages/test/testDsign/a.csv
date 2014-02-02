@@ -1,0 +1,16 @@
+single_ns,single_s,double_ns,double_s,date,bf_viking,planA,planB,term
+1,1,9,0,thirteenDaysAfter,"off","off","on",1
+1,0,1,1,fourteenDaysAfter,"on","on","off",6
+1,1,0,1,workday,"off","on","on",7
+0,0,0,0,holiday,"on","off","off",7
+9,1,1,1,fourteenDaysAfter,"off","off","on",7
+9,0,9,0,fourteenDaysAfter,"off","on","off",6
+0,0,9,1,fourteenDaysAfter,"on","on","on",1
+9,1,1,0,workday,"on","off","off",1
+0,1,0,1,thirteenDaysAfter,"on","off","off",6
+9,1,9,1,holiday,"off","on","on",6
+0,0,1,0,holiday,"off","off","on",1
+9,0,0,1,fourteenDaysAfter,"on","on","on",1
+1,1,9,0,holiday,"on","off","off",7
+0,0,9,1,workday,"on","off","off",6
+9,0,1,1,thirteenDaysAfter,"off","on","on",7

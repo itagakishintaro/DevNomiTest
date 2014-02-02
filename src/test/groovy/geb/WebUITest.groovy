@@ -30,5 +30,6 @@ class WebUITest {
 	def void "テストケース1"(){
 		KDTcore.kdtByExcel(url, book[1], evaluator)
 	}
+
 }
 

@@ -1,0 +1,217 @@
+html, body, div, span, 
+h1, h2, p, a, img, q,
+b {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body { line-height: 1 }
+q { quotes: none }
+
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+body {
+    font-family:'Lucida Grande', Meiryo, sans-serif;
+    min-height: 740px;
+    background-color: white;
+}
+
+.fallback-message {
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+    font-size: 54px;
+    line-height: 1.5em;
+    color:gray;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+b { font-weight: bold }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 2px 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 0.2em;
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover, a:focus {
+    color : rgb(90,90,90);
+    background: rgba(255,255,255,0.9);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.01;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+
+    background-color: #f39c12;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    color: white;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 80px;
+    line-height: 1.5;
+
+    margin-top: 100px;
+}
+
+.slide ol {
+    display: block;
+    font-size: 60px;
+    line-height: 1.5;
+	padding-left: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+#title {
+    padding: 0;
+}
+
+#title span {
+    color: rgb(102, 102, 102);
+    font-size: 64px;
+    position: absolute;
+    top: -0.5em;
+    left: 0px;
+
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+
+#title h1 {
+    color: #f39c12;
+    font-size: 190px;
+
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+
+#title h2 {
+	text-align: center;
+    color: #f39c12;
+    font-size: 100px;
+
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+
+#zoom-in-devnomi, #overview { display: none }
+.impress-on-overview .step {
+    opacity: 0.01;
+    cursor: pointer;
+}
+
+.impress-on-zoom-in-devnomi .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.impress-on-overview .step#title {
+    opacity: 1;
+}
+.impress-enabled          { pointer-events: none }
+.impress-enabled #impress { pointer-events: auto }
+
+.with-image {
+    position: relative;
+}
+
+.with-image .image {
+    position: absolute;
+    bottom: 20px;
+    text-align: right;
+    margin-right: 40px;
+}
+
+.with-image .image img {
+    width:30%;
+}
+
+#all-clear {
+    font-size:70px;
+    color: #f39c12;
+    padding-top: 200px;
+    height: 500px;
+    pointer-events: none;
+}
+
+#all-clear .image {
+    width:900px;
+}
+
+#all-clear .image img {
+    width:14%;
+}
+

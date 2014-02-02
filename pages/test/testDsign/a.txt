@@ -1,0 +1,13 @@
+single_ns:	0,1,9
+single_s:	0,1
+double_ns:	0,1,9
+double_s:	0,1
+date:	workday,holiday,fourteenDaysAfter,thirteenDaysAfter
+bf_viking:	"on","off"
+planA:	"on","off"
+planB:	"on","off"
+term:	1,6,7
+
+
+
+
