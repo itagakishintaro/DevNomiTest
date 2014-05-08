@@ -7,8 +7,18 @@ import org.openqa.selenium.ie.InternetExplorerDriver
 
 reportsDir = "gebreport"
 
+private String chromeDriverPath() {
+	String path
+	if (SystemUtils.IS_OS_MAC || SystemUtils.IS_OS_MAC_OSX) {
+		path = "webdriver/chromedriver" // Mac環境の場合
+	} else {
+		path = "webdriver/chromedriver.exe" // Windows環境の場合
+	}
+	return path
+}
+
 driver = {
-	System.setProperty('webdriver.chrome.driver', 'webdriver/chromedriver.exe')
+	System.setProperty('webdriver.chrome.driver', chromeDriverPath())
 	new ChromeDriver()
 }
 

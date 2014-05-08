@@ -26,19 +26,19 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.10</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
     <dependency>
     	<groupId>org.gebish</groupId>
     	<artifactId>geb-core</artifactId>
-    	<version>0.9.0</version>
+    	<version>0.9.2</version>
     	<scope>test</scope>
     </dependency>
     <dependency>
     	<groupId>org.gebish</groupId>
     	<artifactId>geb-spock</artifactId>
-    	<version>0.9.0</version>
+    	<version>0.9.2</version>
     	<scope>test</scope>
     </dependency>
     <dependency>
@@ -48,11 +48,6 @@
     	<scope>test</scope>
     </dependency>
     <dependency>
-    	<groupId>org.codehaus.groovy</groupId>
-    	<artifactId>groovy-all</artifactId>
-    	<version>2.1.5</version>
-    </dependency>
-    <dependency>
     	<groupId>org.jggug.kobo</groupId>
     	<artifactId>gexcelapi</artifactId>
     	<version>0.3</version>
@@ -60,13 +55,13 @@
     <dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-chrome-driver</artifactId>
-    	<version>2.25.0</version>
+    	<version>2.41.0</version>
     	<scope>test</scope>
     </dependency>
     <dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-support</artifactId>
-    	<version>2.25.0</version>
+    	<version>2.41.0</version>
     	<scope>test</scope>
     </dependency>
     <dependency>
@@ -78,14 +73,19 @@
     <dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-firefox-driver</artifactId>
-    	<version>2.37.1</version>
+    	<version>2.41.0</version>
     	<scope>test</scope>
     </dependency>
     <dependency>
 		<groupId>org.seleniumhq.selenium</groupId>
 		<artifactId>selenium-ie-driver</artifactId>
-		<version>2.37.1</version>
+		<version>2.41.0</version>
 		<scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.codehaus.groovy</groupId>
+    	<artifactId>groovy-all</artifactId>
+    	<version>2.1.5</version>
     </dependency>
   </dependencies>
 </project>
