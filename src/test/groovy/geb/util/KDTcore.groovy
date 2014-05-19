@@ -32,9 +32,11 @@ class KDTcore extends GebSpec{
 
 				switch(keyword){
 					case INPUT:
+					println "INPUT: " + cellValue + " TO " + id
 						$("#"+id).value(cellValue as String)
 						break
 					case CLICK:
+					println "CLICK: " + id
 						$("#"+id).click()
 						break
 					case ASSERT:
@@ -48,9 +50,11 @@ class KDTcore extends GebSpec{
 						}
 						break
 					case REPORT:
+					println "REPORT: " + cellValue
 						report cellValue
 						break
 					case SLEEP:
+					println "SLEEP: " + cellValue
 						sleep Integer.parseInt(cellValue)
 						break
 				}
@@ -84,9 +88,11 @@ class KDTcore extends GebSpec{
 	private static void assertWithOption(actual, cellValue, assertOption){
 		switch(assertOption){
 			case EQUALE:
+			println "ASSERT EQUALE: " + cellValue
 				assert that(actual, is(cellValue))
 				break
 			case CONTAIN:
+			println "ASSERT CONTAIN: " + cellValue
 				assert that(actual, containsString(cellValue))
 				break
 		}
