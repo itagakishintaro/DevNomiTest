@@ -32,29 +32,29 @@ class KDTcore extends GebSpec{
 
 				switch(keyword){
 					case INPUT:
-					println "INPUT: " + cellValue + " TO " + id
+					println i + "行目：INPUT: " + cellValue + " TO " + id
 						$("#"+id).value(cellValue as String)
 						break
 					case CLICK:
-					println "CLICK: " + id
+					println i + "行目：CLICK: " + id
 						$("#"+id).click()
 						break
 					case ASSERT:
 						expect:
 						def actual = $("#"+id).text()
 						try{
-							assertWithOption(actual, cellValue, assertOption)
+							assertWithOption(i, actual, cellValue, assertOption)
 						}catch(AssertionError e){
 							report "error"
 							throw e
 						}
 						break
 					case REPORT:
-					println "REPORT: " + cellValue
+					println i + "行目：REPORT: " + cellValue
 						report cellValue
 						break
 					case SLEEP:
-					println "SLEEP: " + cellValue
+					println i + "行目：SLEEP: " + cellValue
 						sleep Integer.parseInt(cellValue)
 						break
 				}
@@ -85,14 +85,14 @@ class KDTcore extends GebSpec{
 		}
 	}
 
-	private static void assertWithOption(actual, cellValue, assertOption){
+	private static void assertWithOption(i, actual, cellValue, assertOption){
 		switch(assertOption){
 			case EQUALE:
-			println "ASSERT EQUALE: " + cellValue
+			println i + "行目：ASSERT EQUALE: " + cellValue
 				assert that(actual, is(cellValue))
 				break
 			case CONTAIN:
-			println "ASSERT CONTAIN: " + cellValue
+			println i + "行目：ASSERT CONTAIN: " + cellValue
 				assert that(actual, containsString(cellValue))
 				break
 		}
